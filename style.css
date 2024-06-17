@@ -1,0 +1,82 @@
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#root,
+#__next {
+  isolation: isolate;
+}
+
+div {
+  border: 1px solid greenyellow;
+}
+
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr 5fr / 1fr 3fr;
+}
+
+.header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.sidebar {
+  padding: 5%;
+  /* justify-content: start;
+  justify-items: start; */
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+  display: grid;
+  grid-template: max-content max-content max-content / 1fr;
+  row-gap: 10%;
+  padding-top: 2rem;
+}
+
+.options {
+  display: grid;
+  grid-template: 20% 1fr / repeat(auto-fit, 1fr);
+}
+.option-symbol {
+  grid-column: 1/2;
+}
+.main {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
