@@ -269,13 +269,13 @@ input:focus {
   padding: 0 2% 0;
   padding-top: clamp(17px, 5%, 40px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 250px));
-  grid-template-rows: repeat(auto-fit, minmax(210px, 230px));
+  grid-template-columns: repeat(auto-fit, minmax(230px, 450px));
+  grid-template-rows: repeat(auto-fit, minmax(210px, 300px));
   justify-content: center;
 }
 
 .card {
-  max-width: 220px;
+  max-width: 400px;
   height: 200px;
   padding: 1%;
   display: grid;
