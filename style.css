@@ -266,16 +266,22 @@ input:focus {
 .card-container {
   grid-column: 1 / 2;
   grid-row: 1 / -1;
-  padding: 0 2% 0;
+  /* padding: 0 2% 0; */
   padding-top: clamp(17px, 5%, 40px);
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 450px));
+  /* grid-template-columns: repeat(auto-fit, minmax(230px, 450px)); */
+  /* grid-template-columns: repeat(auto-fit, minmax(230px, 45%)); */
+  grid-template-columns: repeat(auto-fit, minmax(190px, 45%));
+  column-gap: 2%;
   grid-template-rows: repeat(auto-fit, minmax(210px, 300px));
-  justify-content: center;
+  /* justify-content: center; */
+  /* place-content: center; */
+  place-items: center;
 }
 
 .card {
   max-width: 400px;
+  /* width: minmax(180px, 450px); */
   height: 200px;
   padding: 1%;
   display: grid;
@@ -284,6 +290,7 @@ input:focus {
   border-left: 5px solid #6c733d;
   border-radius: 1rem;
   background-color: #f2f2f2;
+  position: relative;
 }
 
 .card-title {
@@ -304,15 +311,19 @@ input:focus {
   width: 25%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-row: 3 / 4;
-  grid-column: 2 / 3;
+  /* grid-row: 3 / 4;
+  grid-column: 2 / 3; */
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
 }
 .card-actions > div {
   height: 28px;
   width: 28px;
 }
 
-.announcements {
+.announcements,
+.trending {
   width: 80%;
   background-color: #f2f2f2;
   padding: 5%;
@@ -320,10 +331,12 @@ input:focus {
   border-radius: 1rem;
 }
 
-.announcement-title {
+.announcement-title,
+.trending-title {
   font-size: clamp(14px, 1.55vw, 20px);
 }
-.announcements-content {
+.announcements-content,
+.trending-content {
   height: 75%;
 }
 
@@ -332,7 +345,7 @@ input:focus {
 }
 .news-article > p {
   max-width: 60ch;
-  min-width: 33ch;
+  /* min-width: 33ch; */
   font-size: clamp(12px, 1.55vw, 16px);
 }
 
